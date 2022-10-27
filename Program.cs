@@ -25,6 +25,7 @@ Console.WriteLine();
 Console.WriteLine("La classifica dei miei cibi preferiti:");
 for (int i = 0; i < cibiPreferiti.Length; i++)
 {
+    // attenzione a queste 
     Console.WriteLine( (i + 1 + ". ") + cibiPreferiti[i]);
 }
 
@@ -43,7 +44,14 @@ Console.WriteLine();
 // cibo di mezza classifica
 if ( count % 2 == 0 )
 {
-    Console.WriteLine("I cibi di mezza classifica sono: " + cibiPreferiti[(count / 2) - 1] + " " + cibiPreferiti[count / 2]);
+    //v1
+    //Console.WriteLine("I cibi di mezza classifica sono: " + cibiPreferiti[(count / 2) - 1] + " " + cibiPreferiti[count / 2]);
+
+    //v2
+    int medianaSuperiore = count / 2;
+    int medianaInferiore = medianaSuperiore - 1;
+    Console.WriteLine("I cibi di mezza classifica sono: {0} e {1}", cibiPreferiti[medianaInferiore], cibiPreferiti[medianaSuperiore]);
+
 } else
 {
     Console.WriteLine("Il cibo di mezza classifica é: " + cibiPreferiti[count / 2]);
