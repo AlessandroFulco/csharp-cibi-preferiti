@@ -241,12 +241,17 @@ int N = Convert.ToInt32(Console.ReadLine());
 
 Random rnd = new Random();
 
+// cicla la quantità di array da creare
 for (int i = 0; i < N; i++)
 {
+    //crea ad ogni ciclo un array con 10 elementi con valore 0
     int[] array = new int[10];
     Console.WriteLine("L'array numero " + (i + 1) + " è: ");
+
+    // cicliamo ogni elemento dell'array creato
     for(int j = 0; j < 10; j++)
     {
+        //generiamo per ogni posizione dell'array un numero random
         array[j] = rnd.Next(1, 100);
         Console.Write(array[j] + ", ");
     }
