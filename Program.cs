@@ -60,23 +60,56 @@
 
 
 
-//Snack1.L’utente inserisce due numeri in successione. Il software stampa il maggiore
+////Snack1. L’utente inserisce due numeri in successione. Il software stampa il maggiore
 
-//input utente 1
-Console.Write("Inserisci un numero: ");
-int input1 = Convert.ToInt32(Console.ReadLine());
+////input utente 1
+//Console.Write("Inserisci un numero: ");
+//int input1 = Convert.ToInt32(Console.ReadLine());
 
-//input utente 2
-Console.Write("Inserisci un numero: ");
-int input2 = Convert.ToInt32(Console.ReadLine());
+////input utente 2
+//Console.Write("Inserisci un numero: ");
+//int input2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("I numeri selezionati sono : {0} e {1}", input1, input2);
+//Console.WriteLine("I numeri selezionati sono : {0} e {1}", input1, input2);
 
-if(input1 > input2)
+//if(input1 > input2)
+//{
+//    Console.WriteLine(input1);
+//}
+//else
+//{
+//    Console.WriteLine(input2);
+//}
+
+
+
+////Snack 2.L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga
+
+////input 1
+//Console.Write("Inserisci una parola: ");
+//string inputStringa1 = Console.ReadLine();
+
+////input 1
+//Console.Write("Inserisci una parola: ");
+//string inputStringa2 = Console.ReadLine();
+
+//if(inputStringa1.Length < inputStringa2.Length)
+//{
+//    Console.WriteLine(inputStringa1 + " " + inputStringa2);
+//} else
+//{
+//    Console.WriteLine(inputStringa2 + " " + inputStringa1);
+//}
+
+
+//Snack 3.  Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
+
+int somma = 0;
+
+for (int i = 1; i <= 3; i++)
 {
-    Console.WriteLine(input1);
+    Console.Write("inserisci un numero: ");
+    int input = Convert.ToInt32(Console.ReadLine());
+    somma += input;
 }
-else
-{
-    Console.WriteLine(input2);
-}
+Console.WriteLine(somma);
