@@ -133,17 +133,47 @@
 
 
 
-//Snack 5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo
+////Snack 5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo
+
+////input utente
+//Console.Write("Inserisci un numero: ");
+//int inputUtente = Convert.ToInt32(Console.ReadLine());
+
+////dertermina se pari o dispari senno stampa il numero successivo
+//if(inputUtente % 2 == 0)
+//{
+//    Console.WriteLine("Il numero è Pari: {0}", inputUtente);
+//} else
+//{
+//    Console.WriteLine("Il numero non è pari: {0}", inputUtente + 1);
+//}
+
+
+
+//Snack 6. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+
+string[] invitati = { "Simone", "Mario", "Michele", "Alessandro" };
 
 //input utente
-Console.Write("Inserisci un numero: ");
-int inputUtente = Convert.ToInt32(Console.ReadLine());
+Console.Write("Inserisci il tuo nome: ");
+string inputStringa = Console.ReadLine();
 
-//dertermina se pari o dispari senno stampa il numero successivo
-if(inputUtente % 2 == 0)
+bool invitato = false;
+
+//controllare se il nome è contenuto nell'array
+for(int i = 0; i < invitati.Length; i++)
 {
-    Console.WriteLine("Il numero è Pari: {0}", inputUtente);
-} else
+    if(inputStringa == invitati[i])
+    {
+        invitato = true;
+    }
+}
+
+if (invitato)
 {
-    Console.WriteLine("Il numero non è pari: {0}", inputUtente + 1);
+    Console.WriteLine("Puoi partecipare alla festa di Gatsby");
+}
+else
+{
+    Console.WriteLine("Non sei invitato alla festa di Gatsby");
 }
