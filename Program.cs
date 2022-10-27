@@ -150,30 +150,46 @@
 
 
 
-//Snack 6. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+////Snack 6. In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
 
-string[] invitati = { "Simone", "Mario", "Michele", "Alessandro" };
+//string[] invitati = { "Simone", "Mario", "Michele", "Alessandro" };
 
-//input utente
-Console.Write("Inserisci il tuo nome: ");
-string inputStringa = Console.ReadLine();
+////input utente
+//Console.Write("Inserisci il tuo nome: ");
+//string inputStringa = Console.ReadLine();
 
-bool invitato = false;
+//bool invitato = false;
 
-//controllare se il nome è contenuto nell'array
-for(int i = 0; i < invitati.Length; i++)
+////controllare se il nome è contenuto nell'array
+//for(int i = 0; i < invitati.Length; i++)
+//{
+//    if(inputStringa == invitati[i])
+//    {
+//        invitato = true;
+//    }
+//}
+
+//if (invitato)
+//{
+//    Console.WriteLine("Puoi partecipare alla festa di Gatsby");
+//}
+//else
+//{
+//    Console.WriteLine("Non sei invitato alla festa di Gatsby");
+//}
+
+
+//Snack 7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array
+
+int[] numDispari = new int[6];
+
+for (int i = 0; i < numDispari.Length; i++)
 {
-    if(inputStringa == invitati[i])
+    Console.Write("Inserisci un numero: ");
+    int inputUtente = Convert.ToInt32(Console.ReadLine());
+    if(inputUtente % 2 != 0)
     {
-        invitato = true;
+        numDispari[i] = inputUtente;
     }
-}
-
-if (invitato)
-{
-    Console.WriteLine("Puoi partecipare alla festa di Gatsby");
-}
-else
-{
-    Console.WriteLine("Non sei invitato alla festa di Gatsby");
+    Console.WriteLine(numDispari[i]);
 }
