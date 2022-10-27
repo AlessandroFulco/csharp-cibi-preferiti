@@ -1,5 +1,5 @@
 ﻿
-string[] cibiPreferiti = { "Pizza", "Lasagna", "Carbonara", "Tagse ai funghi", "Kebab", "Tacos", "Cinese" };
+string[] cibiPreferiti = { "Pizza", "Lasagna", "Carbonara", "Tagliatelle ai funghi", "Kebab", "Tacos", "Cinese" };
 
 //stampa lunghezza array
 int count = cibiPreferiti.Length;
