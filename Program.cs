@@ -179,17 +179,31 @@
 //}
 
 
-//Snack 7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array
+////Snack 7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array
 
-int[] numDispari = new int[6];
+//int[] numDispari = new int[6];
 
-for (int i = 0; i < numDispari.Length; i++)
+//for (int i = 0; i < numDispari.Length; i++)
+//{
+//    Console.Write("Inserisci un numero: ");
+//    int inputUtente = Convert.ToInt32(Console.ReadLine());
+//    if(inputUtente % 2 != 0)
+//    {
+//        numDispari[i] = inputUtente;
+//    }
+//    Console.WriteLine(numDispari[i]);
+//}
+
+
+
+//Snack 8. Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+
+int[] arrNum = { 10, 20, 30, 40, 50 };
+
+int somma = 0;
+
+for (int i = 1; i < arrNum.Length; i += 2)
 {
-    Console.Write("Inserisci un numero: ");
-    int inputUtente = Convert.ToInt32(Console.ReadLine());
-    if(inputUtente % 2 != 0)
-    {
-        numDispari[i] = inputUtente;
-    }
-    Console.WriteLine(numDispari[i]);
+    somma += arrNum[i];
 }
+Console.WriteLine("La somma dei numeri dispari è: {0}", somma);
