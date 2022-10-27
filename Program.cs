@@ -1,5 +1,5 @@
 ﻿
-string[] cibiPreferiti = { "Pizza", "Lasagna", "Carbonara", "Tagliatelle ai funghi", "Kebab", "Tacos", "Cinese" };
+string[] cibiPreferiti = { "Pizza", "Lasagna", "Carbonara", "Tagse ai funghi", "Kebab", "Tacos", "Cinese" };
 
 //stampa lunghezza array
 int count = cibiPreferiti.Length;
@@ -19,3 +19,12 @@ Console.WriteLine("Il mio cibo preferito è: " + cibiPreferiti[0]);
 //stampa il cibo meno preferito
 Console.WriteLine("Il mio cibo meno preferito è: " + cibiPreferiti[count - 1]);
 
+
+// cibo di mezza classifica
+if( count % 2 == 0 )
+{
+    Console.WriteLine("I cibi di mezza classifica sono: " + cibiPreferiti[(count / 2) - 1] + " " + cibiPreferiti[count / 2]);
+} else
+{
+    Console.WriteLine("Il cibo di mezza classifica é: " + cibiPreferiti[count / 2]);
+}
