@@ -102,14 +102,30 @@
 //}
 
 
+
 //Snack 3.  Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
 
-int somma = 0;
+//int somma = 0;
 
-for (int i = 1; i <= 3; i++)
+//for (int i = 1; i <= 3; i++)
+//{
+//    Console.Write("inserisci un numero: ");
+//    int input = Convert.ToInt32(Console.ReadLine());
+//    somma += input;
+//}
+//Console.WriteLine(somma);
+
+
+
+//Snack 4. Calcola la somma e la media dei numeri da 2 a 10.
+
+
+int somma = 0;
+int media = 0;
+for(int i = 2; i <= 10; i++)
 {
-    Console.Write("inserisci un numero: ");
-    int input = Convert.ToInt32(Console.ReadLine());
-    somma += input;
+    somma += i + (i + 1);
+    media = somma / 8;
 }
-Console.WriteLine(somma);
+    Console.WriteLine("La somma è: {0}", somma);
+    Console.WriteLine("La media dei numeri è: {0}", media);
