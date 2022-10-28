@@ -276,46 +276,75 @@
 //}
 
 
-//Snack 11. Dare la possibilità di inserire due parole.
-//          Verificare tramite una funzione che le due parole abbiano la stessa lunghezza. 
-//          Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
+////Snack 11. Dare la possibilità di inserire due parole.
+////          Verificare tramite una funzione che le due parole abbiano la stessa lunghezza. 
+////          Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
 
-//input utente1
-Console.Write("Inserisci una parola: ");
-string inputStringa1 = Console.ReadLine();
+////input utente1
+//Console.Write("Inserisci una parola: ");
+//string inputStringa1 = Console.ReadLine();
 
-//input utente2
-Console.Write("Inserisci una parola: ");
-string inputStringa2 = Console.ReadLine();
-
-
-
-bool bothSameInputLenght = false;
-string inputLongest = "";
+////input utente2
+//Console.Write("Inserisci una parola: ");
+//string inputStringa2 = Console.ReadLine();
 
 
-void CheckLength(string inputStringa1, string inputStringa2)
+
+//bool bothSameInputLenght = false;
+//string inputLongest = "";
+
+
+//void CheckLength(string inputStringa1, string inputStringa2)
+//{
+//    if(inputStringa1.Length == inputStringa2.Length)
+//    {
+//        bothSameInputLenght = true;
+//    } 
+//    else if (inputStringa1.Length > inputStringa2.Length)
+//    {
+//        inputLongest = inputStringa1;
+//    } else
+//    {
+//        inputLongest = inputStringa2;
+//    }
+
+//}
+
+//CheckLength(inputStringa1, inputStringa2);
+
+//if(bothSameInputLenght)
+//{
+//    Console.WriteLine("Le parole sono lunghe uguali: {0} - {1}", inputStringa1, inputStringa2);
+//} else
+//{
+//    Console.WriteLine("La parola con più caratteri è: {0}", inputLongest);
+//}
+
+
+
+//Snack 2. Scrivere una funzione per verificare se un numero è pari o dispari.
+//         Quindi chiedere un numero all’utente e comunicargli se è pari o dispari.
+
+
+// inizializzazioni variabili even odd
+bool even = false;
+bool odd = false;
+
+//input numero utente
+Console.Write("Inserisci un numero: ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+void CheckEvenOdd(int number)
 {
-    if(inputStringa1.Length == inputStringa2.Length)
+    if (number % 2 == 0)
     {
-        bothSameInputLenght = true;
-    } 
-    else if (inputStringa1.Length > inputStringa2.Length)
-    {
-        inputLongest = inputStringa1;
+        even = true;
+        Console.WriteLine("Il numero inserito è pari: {0}", number);
     } else
     {
-        inputLongest = inputStringa2;
+        odd = true;
+        Console.WriteLine("Il numero inserito è dispari: {0}", number);
     }
-
 }
 
-CheckLength(inputStringa1, inputStringa2);
-
-if(bothSameInputLenght)
-{
-    Console.WriteLine("Le parole sono lunghe uguali: {0} - {1}", inputStringa1, inputStringa2);
-} else
-{
-    Console.WriteLine("La parola con più caratteri è: {0}", inputLongest);
-}
+CheckEvenOdd(number);
