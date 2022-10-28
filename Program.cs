@@ -288,37 +288,31 @@
 //Console.Write("Inserisci una parola: ");
 //string inputStringa2 = Console.ReadLine();
 
+//string longestWordOrSame = CheckLength(inputStringa1, inputStringa2);
+//Console.WriteLine(longestWordOrSame);
 
 
-//bool bothSameInputLenght = false;
-//string inputLongest = "";
 
-
-//void CheckLength(string inputStringa1, string inputStringa2)
+//string CheckLength(string inputStringa1, string inputStringa2)
 //{
-//    if(inputStringa1.Length == inputStringa2.Length)
+//    if (inputStringa1.Length == inputStringa2.Length)
 //    {
-//        bothSameInputLenght = true;
-//    } 
+//        return inputStringa1 + " - " + inputStringa2;
+//    }
 //    else if (inputStringa1.Length > inputStringa2.Length)
 //    {
-//        inputLongest = inputStringa1;
-//    } else
+//        return inputStringa1;
+//    }
+//    else
 //    {
-//        inputLongest = inputStringa2;
+//        return inputStringa2;
 //    }
 
 //}
 
-//CheckLength(inputStringa1, inputStringa2);
 
-//if(bothSameInputLenght)
-//{
-//    Console.WriteLine("Le parole sono lunghe uguali: {0} - {1}", inputStringa1, inputStringa2);
-//} else
-//{
-//    Console.WriteLine("La parola con più caratteri è: {0}", inputLongest);
-//}
+
+
 
 
 
@@ -326,25 +320,20 @@
 //         Quindi chiedere un numero all’utente e comunicargli se è pari o dispari.
 
 
-// inizializzazioni variabili even odd
-bool even = false;
-bool odd = false;
-
 //input numero utente
 Console.Write("Inserisci un numero: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-void CheckEvenOdd(int number)
+string CheckEvenOdd(int number)
 {
     if (number % 2 == 0)
     {
-        even = true;
-        Console.WriteLine("Il numero inserito è pari: {0}", number);
-    } else
+        return "pari";
+    }
+    else
     {
-        odd = true;
-        Console.WriteLine("Il numero inserito è dispari: {0}", number);
+        return "dispari";
     }
 }
 
-CheckEvenOdd(number);
+Console.WriteLine("Il numero inserito è " + CheckEvenOdd(number));
