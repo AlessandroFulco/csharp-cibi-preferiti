@@ -72,7 +72,7 @@
 
 //Console.WriteLine("I numeri selezionati sono : {0} e {1}", input1, input2);
 
-//if(input1 > input2)
+//if (input1 > input2)
 //{
 //    Console.WriteLine(input1);
 //}
@@ -93,27 +93,28 @@
 //Console.Write("Inserisci una parola: ");
 //string inputStringa2 = Console.ReadLine();
 
-//if(inputStringa1.Length < inputStringa2.Length)
+//if (inputStringa1.Length < inputStringa2.Length)
 //{
 //    Console.WriteLine(inputStringa1 + " " + inputStringa2);
-//} else
+//}
+//else
 //{
 //    Console.WriteLine(inputStringa2 + " " + inputStringa1);
 //}
 
 
 
-//Snack 3.  Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
+//Snack 3.Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
 
-//int somma = 0;
+int somma = 0;
 
-//for (int i = 1; i <= 3; i++)
-//{
-//    Console.Write("inserisci un numero: ");
-//    int input = Convert.ToInt32(Console.ReadLine());
-//    somma += input;
-//}
-//Console.WriteLine(somma);
+for (int i = 1; i <= 10; i++)
+{
+    Console.Write("inserisci un numero: ");
+    int input = Convert.ToInt32(Console.ReadLine());
+    somma += input;
+}
+Console.WriteLine(somma);
 
 
 
