@@ -104,32 +104,32 @@
 
 
 
-//Snack 3.Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
-
-int somma = 0;
-
-for (int i = 1; i <= 10; i++)
-{
-    Console.Write("inserisci un numero: ");
-    int input = Convert.ToInt32(Console.ReadLine());
-    somma += input;
-}
-Console.WriteLine(somma);
-
-
-
-////Snack 4. Calcola la somma e la media dei numeri da 2 a 10.
-
+////Snack 3.Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
 
 //int somma = 0;
-//double media = 0.0;
-//for(int i = 2; i <= 10; i++)
+
+//for (int i = 1; i <= 10; i++)
 //{
-//    somma += i + (i + 1);
-//    media = somma / 8;
+//    Console.Write("inserisci un numero: ");
+//    int input = Convert.ToInt32(Console.ReadLine());
+//    somma += input;
 //}
-//    Console.WriteLine("La somma è: {0}", somma);
-//    Console.WriteLine("La media dei numeri è: {0}", media);
+//Console.WriteLine(somma);
+
+
+
+//Snack 4. Calcola la somma e la media dei numeri da 2 a 10.
+
+
+int somma = 0;
+double media = 0.0;
+for (int i = 2; i <= 10; i++)
+{
+    somma += i;
+    media = somma / 9;
+}
+Console.WriteLine("La somma è: {0}", somma);
+Console.WriteLine("La media dei numeri è: {0}", media);
 
 
 
@@ -231,30 +231,30 @@ Console.WriteLine(somma);
 
 
 
-//Snack 10. Fai inserire un numero, che chiameremo N, all’utente.
-//Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
-//Ogni volta che ne crei uno, stampalo a schermo.
+////Snack 10. Fai inserire un numero, che chiameremo N, all’utente.
+////Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+////Ogni volta che ne crei uno, stampalo a schermo.
 
 
-//input utente
-Console.Write("Inserisci un numero: ");
-int N = Convert.ToInt32(Console.ReadLine());
+////input utente
+//Console.Write("Inserisci un numero: ");
+//int N = Convert.ToInt32(Console.ReadLine());
 
-Random rnd = new Random();
+//Random rnd = new Random();
 
-// cicla la quantità di array da creare
-for (int i = 0; i < N; i++)
-{
-    //crea ad ogni ciclo un array con 10 elementi con valore 0
-    int[] array = new int[10];
-    Console.WriteLine("L'array numero " + (i + 1) + " è: ");
+//// cicla la quantità di array da creare
+//for (int i = 0; i < N; i++)
+//{
+//    //crea ad ogni ciclo un array con 10 elementi con valore 0
+//    int[] array = new int[10];
+//    Console.WriteLine("L'array numero " + (i + 1) + " è: ");
 
-    // cicliamo ogni elemento dell'array creato
-    for(int j = 0; j < 10; j++)
-    {
-        //generiamo per ogni posizione dell'array un numero random
-        array[j] = rnd.Next(1, 100);
-        Console.Write(array[j] + ", ");
-    }
-    Console.WriteLine();
-}
+//    // cicliamo ogni elemento dell'array creato
+//    for(int j = 0; j < 10; j++)
+//    {
+//        //generiamo per ogni posizione dell'array un numero random
+//        array[j] = rnd.Next(1, 100);
+//        Console.Write(array[j] + ", ");
+//    }
+//    Console.WriteLine();
+//}
