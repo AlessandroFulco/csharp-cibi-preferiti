@@ -118,36 +118,37 @@
 
 
 
-//Snack 4. Calcola la somma e la media dei numeri da 2 a 10.
+////Snack 4. Calcola la somma e la media dei numeri da 2 a 10.
 
 
-int somma = 0;
-double media = 0.0;
-for (int i = 2; i <= 10; i++)
-{
-    somma += i;
-    media = somma / 9;
-}
-Console.WriteLine("La somma è: {0}", somma);
-Console.WriteLine("La media dei numeri è: {0}", media);
-
-
-
-
-////Snack 5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo
-
-////input utente
-//Console.Write("Inserisci un numero: ");
-//int inputUtente = Convert.ToInt32(Console.ReadLine());
-
-////dertermina se pari o dispari senno stampa il numero successivo
-//if(inputUtente % 2 == 0)
+//int somma = 0;
+//int media = 0;
+//for (int i = 2; i <= 10; i++)
 //{
-//    Console.WriteLine("Il numero è Pari: {0}", inputUtente);
-//} else
-//{
-//    Console.WriteLine("Il numero non è pari: {0}", inputUtente + 1);
+//    somma += i;
+//    media = somma / 9;
 //}
+//Console.WriteLine("La somma è: {0}", somma);
+//Console.WriteLine("La media dei numeri è: {0}", media);
+
+
+
+
+//Snack 5. Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo
+
+//input utente
+Console.Write("Inserisci un numero: ");
+int inputUtente = Convert.ToInt32(Console.ReadLine());
+
+//dertermina se pari o dispari senno stampa il numero successivo
+if (inputUtente % 2 == 0)
+{
+    Console.WriteLine("Il numero è Pari: {0}", inputUtente);
+}
+else
+{
+    Console.WriteLine("Il numero inserito non è pari. Inserito: {0}, restituito: {1}", inputUtente, inputUtente + 1);
+}
 
 
 
