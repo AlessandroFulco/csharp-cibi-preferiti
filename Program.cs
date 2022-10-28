@@ -247,30 +247,75 @@
 
 
 
-//Snack 10. Fai inserire un numero, che chiameremo N, all’utente.
-//Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
-//Ogni volta che ne crei uno, stampalo a schermo.
+////Snack 10. Fai inserire un numero, che chiameremo N, all’utente.
+////Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+////Ogni volta che ne crei uno, stampalo a schermo.
 
 
-//input utente
-Console.Write("Inserisci un numero: ");
-int N = Convert.ToInt32(Console.ReadLine());
+////input utente
+//Console.Write("Inserisci un numero: ");
+//int N = Convert.ToInt32(Console.ReadLine());
 
-Random rnd = new Random();
+//Random rnd = new Random();
 
-// cicla la quantità di array da creare
-for (int i = 0; i < N; i++)
+//// cicla la quantità di array da creare
+//for (int i = 0; i < N; i++)
+//{
+//    //crea ad ogni ciclo un array con 10 elementi con valore 0
+//    int[] array = new int[10];
+//    Console.WriteLine("L'array numero " + (i + 1) + " è: ");
+
+//    // cicliamo ogni elemento dell'array creato
+//    for (int j = 0; j < 10; j++)
+//    {
+//        //generiamo per ogni posizione dell'array un numero random
+//        array[j] = rnd.Next(1, 101);
+//        Console.Write(array[j] + ", ");
+//    }
+//    Console.WriteLine();
+//}
+
+
+//Snack 11. Dare la possibilità di inserire due parole.
+//          Verificare tramite una funzione che le due parole abbiano la stessa lunghezza. 
+//          Se hanno la stessa lunghezza, stamparle entrambe, altrimenti stampare la più lunga delle due.
+
+//input utente1
+Console.Write("Inserisci una parola: ");
+string inputStringa1 = Console.ReadLine();
+
+//input utente2
+Console.Write("Inserisci una parola: ");
+string inputStringa2 = Console.ReadLine();
+
+
+
+bool bothSameInputLenght = false;
+string inputLongest = "";
+
+
+void CheckLength(string inputStringa1, string inputStringa2)
 {
-    //crea ad ogni ciclo un array con 10 elementi con valore 0
-    int[] array = new int[10];
-    Console.WriteLine("L'array numero " + (i + 1) + " è: ");
-
-    // cicliamo ogni elemento dell'array creato
-    for (int j = 0; j < 10; j++)
+    if(inputStringa1.Length == inputStringa2.Length)
     {
-        //generiamo per ogni posizione dell'array un numero random
-        array[j] = rnd.Next(1, 101);
-        Console.Write(array[j] + ", ");
+        bothSameInputLenght = true;
+    } 
+    else if (inputStringa1.Length > inputStringa2.Length)
+    {
+        inputLongest = inputStringa1;
+    } else
+    {
+        inputLongest = inputStringa2;
     }
-    Console.WriteLine();
+
+}
+
+CheckLength(inputStringa1, inputStringa2);
+
+if(bothSameInputLenght)
+{
+    Console.WriteLine("Le parole sono lunghe uguali: {0} - {1}", inputStringa1, inputStringa2);
+} else
+{
+    Console.WriteLine("La parola con più caratteri è: {0}", inputLongest);
 }
