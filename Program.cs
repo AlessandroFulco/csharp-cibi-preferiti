@@ -182,22 +182,22 @@
 //}
 
 
-//Snack 7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array
+////Snack 7. Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array
 
-int[] numDispari = new int[6];
-int indexArr = 0;
+//int[] numDispari = new int[6];
+//int indexArr = 0;
 
-for (int i = 0; i < numDispari.Length; i++)
-{
-    Console.Write("Inserisci un numero: ");
-    int inputUtente = Convert.ToInt32(Console.ReadLine());
-    if (inputUtente % 2 != 0)
-    {
-        numDispari[indexArr] = inputUtente;
-        indexArr++;
-    }
-    Console.WriteLine(numDispari[i]);
-}
+//for (int i = 0; i < numDispari.Length; i++)
+//{
+//    Console.Write("Inserisci un numero: ");
+//    int inputUtente = Convert.ToInt32(Console.ReadLine());
+//    if (inputUtente % 2 != 0)
+//    {
+//        numDispari[indexArr] = inputUtente;
+//        indexArr++;
+//    }
+//    Console.WriteLine(numDispari[i]);
+//}
 
 
 
@@ -207,9 +207,21 @@ for (int i = 0; i < numDispari.Length; i++)
 
 //int somma = 0;
 
+//// v1
 //for (int i = 1; i < arrNum.Length; i += 2)
 //{
 //    somma += arrNum[i];
+//}
+//Console.WriteLine("La somma dei numeri dispari è: {0}", somma);
+
+//somma = 0;
+////v2 
+//for (int i = 0; i < arrNum.Length; i++)
+//{
+//    if(i % 2 != 0)
+//    {
+//        somma += arrNum[i];
+//    }
 //}
 //Console.WriteLine("La somma dei numeri dispari è: {0}", somma);
 
@@ -235,30 +247,30 @@ for (int i = 0; i < numDispari.Length; i++)
 
 
 
-////Snack 10. Fai inserire un numero, che chiameremo N, all’utente.
-////Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
-////Ogni volta che ne crei uno, stampalo a schermo.
+//Snack 10. Fai inserire un numero, che chiameremo N, all’utente.
+//Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+//Ogni volta che ne crei uno, stampalo a schermo.
 
 
-////input utente
-//Console.Write("Inserisci un numero: ");
-//int N = Convert.ToInt32(Console.ReadLine());
+//input utente
+Console.Write("Inserisci un numero: ");
+int N = Convert.ToInt32(Console.ReadLine());
 
-//Random rnd = new Random();
+Random rnd = new Random();
 
-//// cicla la quantità di array da creare
-//for (int i = 0; i < N; i++)
-//{
-//    //crea ad ogni ciclo un array con 10 elementi con valore 0
-//    int[] array = new int[10];
-//    Console.WriteLine("L'array numero " + (i + 1) + " è: ");
+// cicla la quantità di array da creare
+for (int i = 0; i < N; i++)
+{
+    //crea ad ogni ciclo un array con 10 elementi con valore 0
+    int[] array = new int[10];
+    Console.WriteLine("L'array numero " + (i + 1) + " è: ");
 
-//    // cicliamo ogni elemento dell'array creato
-//    for(int j = 0; j < 10; j++)
-//    {
-//        //generiamo per ogni posizione dell'array un numero random
-//        array[j] = rnd.Next(1, 100);
-//        Console.Write(array[j] + ", ");
-//    }
-//    Console.WriteLine();
-//}
+    // cicliamo ogni elemento dell'array creato
+    for (int j = 0; j < 10; j++)
+    {
+        //generiamo per ogni posizione dell'array un numero random
+        array[j] = rnd.Next(1, 101);
+        Console.Write(array[j] + ", ");
+    }
+    Console.WriteLine();
+}
